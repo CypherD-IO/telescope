@@ -1,4 +1,4 @@
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { CertificateID, MsgCreateCertificate, MsgRevokeCertificate } from "./cert";
 export interface AminoMsgCreateCertificate extends AminoMsg {
   type: "akash/cert/v1beta2/testonly-create-certificate";

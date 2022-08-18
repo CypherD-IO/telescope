@@ -1,4 +1,4 @@
-import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
 import { MsgRegisterDevFeeInfo, MsgCancelDevFeeInfo, MsgUpdateDevFeeInfo } from "./tx";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/evmos.fees.v1.MsgRegisterDevFeeInfo", MsgRegisterDevFeeInfo], ["/evmos.fees.v1.MsgCancelDevFeeInfo", MsgCancelDevFeeInfo], ["/evmos.fees.v1.MsgUpdateDevFeeInfo", MsgUpdateDevFeeInfo]];
 export const load = (protoRegistry: Registry) => {

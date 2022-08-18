@@ -2,7 +2,7 @@ import { OrderID } from "./order";
 import { DecCoin, Coin } from "../../../cosmos/base/v1beta1/coin";
 import { BidID, MsgCreateBid, MsgCloseBid } from "./bid";
 import { LeaseID, MsgWithdrawLease, MsgCreateLease, MsgCloseLease } from "./lease";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { Long } from "@osmonauts/helpers";
 export interface AminoMsgCreateBid extends AminoMsg {
   type: "akash/market/v1beta2/testonly-create-bid";

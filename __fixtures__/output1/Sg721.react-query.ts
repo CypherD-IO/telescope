@@ -5,8 +5,8 @@
 */
 
 import { UseQueryOptions, useQuery, useMutation, UseMutationOptions } from "@tanstack/react-query";
-import { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
-import { StdFee, Coin } from "@cosmjs/amino";
+import { ExecuteResult } from "@cosmjs-rn/cosmwasm-stargate";
+import { StdFee, Coin } from "@cosmjs-rn/amino";
 import { Expiration, Timestamp, Uint64, AllNftInfoResponse, OwnerOfResponse, Approval, NftInfoResponseForEmpty, Empty, AllOperatorsResponse, AllTokensResponse, ApprovalResponse, ApprovalsResponse, Decimal, CollectionInfoResponse, RoyaltyInfoResponse, ContractInfoResponse, ExecuteMsgForEmpty, Binary, MintMsgForEmpty, InstantiateMsg, CollectionInfoForRoyaltyInfoResponse, MinterResponse, NftInfoResponse, NumTokensResponse, OperatorsResponse, QueryMsg, TokensResponse } from "./Sg721.types";
 import { Sg721QueryClient, Sg721Client } from "./Sg721.client";
 export interface Sg721ReactQuery<TResponse> {

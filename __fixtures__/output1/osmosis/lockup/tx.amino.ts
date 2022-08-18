@@ -1,7 +1,7 @@
 import { Duration } from "../../google/protobuf/duration";
 import { Coin } from "../../cosmos/base/v1beta1/coin";
 import { PeriodLock } from "./lock";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { Long } from "@osmonauts/helpers";
 import { MsgLockTokens, MsgBeginUnlockingAll, MsgBeginUnlocking, MsgExtendLockup } from "./tx";
 export interface AminoMsgLockTokens extends AminoMsg {

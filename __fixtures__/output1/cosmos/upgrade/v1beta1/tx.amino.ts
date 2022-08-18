@@ -1,5 +1,5 @@
 import { Plan } from "./upgrade";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { Long } from "@osmonauts/helpers";
 import { Timestamp } from "../../../google/protobuf/timestamp";
 import { Any } from "../../../google/protobuf/any";

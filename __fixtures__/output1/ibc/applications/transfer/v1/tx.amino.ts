@@ -1,6 +1,6 @@
 import { Coin } from "../../../../cosmos/base/v1beta1/coin";
 import { Height } from "../../../core/client/v1/client";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { AminoHeight, Long, omitDefault } from "@osmonauts/helpers";
 import { MsgTransfer } from "./tx";
 export interface AminoMsgTransfer extends AminoMsg {

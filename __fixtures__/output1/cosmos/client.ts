@@ -1,5 +1,5 @@
-import { OfflineSigner, GeneratedType, Registry } from "@cosmjs/proto-signing";
-import { defaultRegistryTypes, AminoTypes, SigningStargateClient } from "@cosmjs/stargate";
+import { OfflineSigner, GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
+import { defaultRegistryTypes, AminoTypes, SigningStargateClient } from "@cosmjs-rn/stargate";
 import * as cosmosAuthzV1beta1TxRegistry from "./authz/v1beta1/tx.registry";
 import * as cosmosBankV1beta1TxRegistry from "./bank/v1beta1/tx.registry";
 import * as cosmosCrisisV1beta1TxRegistry from "./crisis/v1beta1/tx.registry";

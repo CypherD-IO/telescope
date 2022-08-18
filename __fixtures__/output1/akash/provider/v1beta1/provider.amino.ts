@@ -1,5 +1,5 @@
 import { Attribute } from "../../base/v1beta1/attribute";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { ProviderInfo, MsgCreateProvider, MsgUpdateProvider, MsgDeleteProvider } from "./provider";
 export interface AminoMsgCreateProvider extends AminoMsg {
   type: "akash/provider/testonly-create-provider";

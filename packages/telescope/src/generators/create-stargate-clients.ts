@@ -65,8 +65,8 @@ export const plugin = (
     });
 
     const cProg = [
-        importStmt(['OfflineSigner', 'GeneratedType', 'Registry'], '@cosmjs/proto-signing'),
-        importStmt(['defaultRegistryTypes', 'AminoTypes', 'SigningStargateClient'], '@cosmjs/stargate'),
+        importStmt(['OfflineSigner', 'GeneratedType', 'Registry'], '@cosmjs-rn/proto-signing'),
+        importStmt(['defaultRegistryTypes', 'AminoTypes', 'SigningStargateClient'], '@cosmjs-rn/stargate'),
     ]
         .concat(registryImports)
         .concat(converterImports)

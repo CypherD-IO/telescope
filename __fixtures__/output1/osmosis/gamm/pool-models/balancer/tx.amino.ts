@@ -1,5 +1,5 @@
 import { PoolParams, PoolAsset, SmoothWeightChangeParams } from "./balancerPool";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { Long } from "@osmonauts/helpers";
 import { Timestamp } from "../../../../google/protobuf/timestamp";
 import { Duration } from "../../../../google/protobuf/duration";

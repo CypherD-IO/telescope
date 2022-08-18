@@ -1,6 +1,6 @@
 import { Timestamp } from "../../../google/protobuf/timestamp";
 import { Period } from "../../../cosmos/vesting/v1beta1/vesting";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { Long } from "@osmonauts/helpers";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 import { MsgCreateClawbackVestingAccount, MsgClawback } from "./tx";

@@ -10,10 +10,10 @@
     "packages/*"
   ],
   "version": "independent",
-  "registry": "https://registry.npmjs.org",
+  "registry": "https://npm.pkg.github.com/@cypherd-io",
   "command": {
     "create": {
-      "homepage": "https://github.com/osmosis-labs/telescope",
+      "homepage": "https://github.com/CypherD-IO/telescope",
       "license": "SEE LICENSE IN LICENSE",
       "access": "restricted"
     },

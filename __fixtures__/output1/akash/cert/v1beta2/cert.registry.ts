@@ -1,4 +1,4 @@
-import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
 import { MsgCreateCertificate, MsgRevokeCertificate } from "./cert";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/akash.cert.v1beta2.MsgCreateCertificate", MsgCreateCertificate], ["/akash.cert.v1beta2.MsgRevokeCertificate", MsgRevokeCertificate]];
 export const load = (protoRegistry: Registry) => {

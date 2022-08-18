@@ -1,5 +1,5 @@
-import { OfflineSigner, GeneratedType, Registry } from "@cosmjs/proto-signing";
-import { defaultRegistryTypes, AminoTypes, SigningStargateClient } from "@cosmjs/stargate";
+import { OfflineSigner, GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
+import { defaultRegistryTypes, AminoTypes, SigningStargateClient } from "@cosmjs-rn/stargate";
 import * as osmosisGammPoolmodelsBalancerTxRegistry from "./gamm/pool-models/balancer/tx.registry";
 import * as osmosisGammPoolmodelsStableswapTxRegistry from "./gamm/pool-models/stableswap/tx.registry";
 import * as osmosisGammV1beta1TxRegistry from "./gamm/v1beta1/tx.registry";

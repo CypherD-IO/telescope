@@ -1,6 +1,6 @@
 import { Timestamp } from "../../../google/protobuf/timestamp";
 import { Period } from "../../../cosmos/vesting/v1beta1/vesting";
-import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
 import { MsgCreateClawbackVestingAccount, MsgClawback } from "./tx";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/evmos.vesting.v1.MsgCreateClawbackVestingAccount", MsgCreateClawbackVestingAccount], ["/evmos.vesting.v1.MsgClawback", MsgClawback]];
 export const load = (protoRegistry: Registry) => {

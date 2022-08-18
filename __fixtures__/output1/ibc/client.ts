@@ -1,5 +1,5 @@
-import { OfflineSigner, GeneratedType, Registry } from "@cosmjs/proto-signing";
-import { defaultRegistryTypes, AminoTypes, SigningStargateClient } from "@cosmjs/stargate";
+import { OfflineSigner, GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
+import { defaultRegistryTypes, AminoTypes, SigningStargateClient } from "@cosmjs-rn/stargate";
 import * as ibcApplicationsTransferV1TxRegistry from "./applications/transfer/v1/tx.registry";
 import * as ibcCoreChannelV1TxRegistry from "./core/channel/v1/tx.registry";
 import * as ibcCoreClientV1TxRegistry from "./core/client/v1/tx.registry";

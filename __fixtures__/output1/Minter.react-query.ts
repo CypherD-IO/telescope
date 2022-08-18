@@ -5,8 +5,8 @@
 */
 
 import { UseQueryOptions, useQuery, useMutation, UseMutationOptions } from "@tanstack/react-query";
-import { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
-import { StdFee } from "@cosmjs/amino";
+import { ExecuteResult } from "@cosmjs-rn/cosmwasm-stargate";
+import { StdFee } from "@cosmjs-rn/amino";
 import { Timestamp, Uint64, Uint128, ConfigResponse, Coin, Addr, Config, ExecuteMsg, Decimal, InstantiateMsg, InstantiateMsg1, CollectionInfoForRoyaltyInfoResponse, RoyaltyInfoResponse, QueryMsg } from "./Minter.types";
 import { MinterQueryClient, MinterClient } from "./Minter.client";
 export interface MinterReactQuery<TResponse> {

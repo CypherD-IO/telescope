@@ -1,6 +1,6 @@
-import { Secp256k1HdWallet } from '@cosmjs/amino';
-import { DirectSecp256k1HdWallet } from '@cosmjs/proto-signing';
-import { Slip10RawIndex } from '@cosmjs/crypto';
+import { Secp256k1HdWallet } from '@cosmjs-rn/amino';
+import { DirectSecp256k1HdWallet } from '@cosmjs-rn/proto-signing';
+import { Slip10RawIndex } from '@cosmjs-rn/crypto';
 
 export function makeHdPath(coinType = 118, account = 0) {
     return [

@@ -1,7 +1,7 @@
 import { AccessConfig, accessTypeFromJSON } from "./types";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
-import { AminoMsg } from "@cosmjs/amino";
-import { toBase64, fromBase64, fromUtf8, toUtf8 } from "@cosmjs/encoding";
+import { AminoMsg } from "@cosmjs-rn/amino";
+import { toBase64, fromBase64, fromUtf8, toUtf8 } from "@cosmjs-rn/encoding";
 import { Long } from "@osmonauts/helpers";
 import { MsgStoreCode, MsgInstantiateContract, MsgExecuteContract, MsgMigrateContract, MsgUpdateAdmin, MsgClearAdmin } from "./tx";
 export interface AminoMsgStoreCode extends AminoMsg {

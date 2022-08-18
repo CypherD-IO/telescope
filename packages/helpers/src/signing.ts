@@ -1,4 +1,4 @@
-import { SigningStargateClient } from '@cosmjs/stargate';
+import { SigningStargateClient } from '@cosmjs-rn/stargate';
 import { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 
 export const signAndBroadcast = async ({

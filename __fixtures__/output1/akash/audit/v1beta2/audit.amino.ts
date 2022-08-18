@@ -1,5 +1,5 @@
 import { Attribute } from "../../base/v1beta2/attribute";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { MsgSignProviderAttributes, MsgDeleteProviderAttributes } from "./audit";
 export interface AminoMsgSignProviderAttributes extends AminoMsg {
   type: "mymessage-testonly";

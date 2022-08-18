@@ -2,7 +2,7 @@ import { DeploymentID } from "./deployment";
 import { GroupSpec } from "./groupspec";
 import { Coin, DecCoin } from "../../../cosmos/base/v1beta1/coin";
 import { GroupID } from "./groupid";
-import { AminoMsg } from "@cosmjs/amino";
+import { AminoMsg } from "@cosmjs-rn/amino";
 import { Long } from "@osmonauts/helpers";
 import { PlacementRequirements, SignedBy, Attribute } from "../../base/v1beta2/attribute";
 import { Resource } from "./resource";

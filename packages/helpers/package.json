@@ -1,9 +1,9 @@
 {
-  "name": "@osmonauts/helpers",
+  "name": "@cypherd-io/osmonauts-helpers",
   "version": "0.4.1",
   "description": "Telescope helpers",
   "author": "Dan Lynch <pyramation@gmail.com>",
-  "homepage": "https://github.com/osmosis-labs/telescope/tree/master/packages/helpers#readme",
+  "homepage": "https://github.com/CypherD-IO/telescope/tree/main/packages/helpers#readme",
   "license": "SEE LICENSE IN LICENSE",
   "main": "main/index.js",
   "module": "module/index.js",
@@ -39,11 +39,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/osmosis-labs/telescope/tree/master/packages/helpers"
+    "url": "https://github.com/CypherD-IO/telescope/tree/master/packages/helpers"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/osmosis-labs/telescope/tree/master/packages/helpers/issues"
+    "url": "https://github.com/CypherD-IO/telescope/tree/master/packages/helpers/issues"
   },
   "devDependencies": {
     "@babel/cli": "7.18.10",
@@ -77,10 +77,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
-    "@cosmjs/amino": "0.28.11",
-    "@cosmjs/crypto": "0.28.11",
-    "@cosmjs/proto-signing": "0.28.11",
-    "@cosmjs/stargate": "0.28.11",
+    "@cosmjs-rn/amino": "0.27.1",
+    "@cosmjs-rn/crypto": "0.27.1",
+    "@cosmjs-rn/proto-signing": "0.27.1",
+    "@cosmjs-rn/stargate": "0.27.1",
+    "@cosmjs-rn/cosmwasm-stargate": "0.27.1",
     "cosmjs-types": "0.5.0",
     "long": "^5.2.0",
     "protobufjs": "^6.11.3"

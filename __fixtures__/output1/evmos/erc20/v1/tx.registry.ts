@@ -1,5 +1,5 @@
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
-import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
 import { MsgConvertCoin, MsgConvertERC20 } from "./tx";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/evmos.erc20.v1.MsgConvertCoin", MsgConvertCoin], ["/evmos.erc20.v1.MsgConvertERC20", MsgConvertERC20]];
 export const load = (protoRegistry: Registry) => {

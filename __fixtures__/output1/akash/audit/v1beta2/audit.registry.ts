@@ -1,5 +1,5 @@
 import { Attribute } from "../../base/v1beta2/attribute";
-import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
 import { MsgSignProviderAttributes, MsgDeleteProviderAttributes } from "./audit";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/akash.audit.v1beta2.MsgSignProviderAttributes", MsgSignProviderAttributes], ["/akash.audit.v1beta2.MsgDeleteProviderAttributes", MsgDeleteProviderAttributes]];
 export const load = (protoRegistry: Registry) => {

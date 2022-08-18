@@ -53,7 +53,7 @@ export default async (argv) => {
             ].map(name => {
                 return {
                     name,
-                    value: `@cosmjson/${name}`
+                    value: `@cosmjs-rnon/${name}`
                 }
             })
         }
@@ -87,7 +87,7 @@ export default async (argv) => {
             return [extDir, resolve(join(cur, 'contracts', dst)), dir];
         });
 
-    // move protos 
+    // move protos
     for (const [src, dst, pkg] of cmds) {
         rimraf(dst);
         console.log(`installing ${pkg}...`);

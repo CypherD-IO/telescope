@@ -4,20 +4,35 @@
 * and run the @cosmwasm/ts-codegen generate command to regenerate this file.
 */
 
-import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
-import { StdFee } from "@cosmjs/amino";
-import { Timestamp, Uint64, Uint128, ConfigResponse, Coin, Addr, Config, ExecuteMsg, Decimal, InstantiateMsg, InstantiateMsg1, CollectionInfoForRoyaltyInfoResponse, RoyaltyInfoResponse, QueryMsg } from "./Minter.types";
+import {
+  CosmWasmClient,
+  SigningCosmWasmClient,
+  ExecuteResult,
+} from "@cosmjs-rn/cosmwasm-stargate";
+import { StdFee } from "@cosmjs-rn/amino";
+import {
+  Timestamp,
+  Uint64,
+  Uint128,
+  ConfigResponse,
+  Coin,
+  Addr,
+  Config,
+  ExecuteMsg,
+  Decimal,
+  InstantiateMsg,
+  InstantiateMsg1,
+  CollectionInfoForRoyaltyInfoResponse,
+  RoyaltyInfoResponse,
+  QueryMsg,
+} from "./Minter.types";
 export interface MinterReadOnlyInterface {
   contractAddress: string;
   config: () => Promise<ConfigResponse>;
   mintableNumTokens: () => Promise<MintableNumTokensResponse>;
   startTime: () => Promise<StartTimeResponse>;
   mintPrice: () => Promise<MintPriceResponse>;
-  mintCount: ({
-    address
-  }: {
-    address: string;
-  }) => Promise<MintCountResponse>;
+  mintCount: ({ address }: { address: string }) => Promise<MintCountResponse>;
 }
 export class MinterQueryClient implements MinterReadOnlyInterface {
   client: CosmWasmClient;
@@ -35,71 +50,107 @@ export class MinterQueryClient implements MinterReadOnlyInterface {
 
   config = async (): Promise<ConfigResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
-      config: {}
+      config: {},
     });
   };
   mintableNumTokens = async (): Promise<MintableNumTokensResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
-      mintable_num_tokens: {}
+      mintable_num_tokens: {},
     });
   };
   startTime = async (): Promise<StartTimeResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
-      start_time: {}
+      start_time: {},
     });
   };
   mintPrice = async (): Promise<MintPriceResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
-      mint_price: {}
+      mint_price: {},
     });
   };
   mintCount = async ({
-    address
+    address,
   }: {
     address: string;
   }): Promise<MintCountResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
       mint_count: {
-        address
-      }
+        address,
+      },
     });
   };
 }
 export interface MinterInterface extends MinterReadOnlyInterface {
   contractAddress: string;
   sender: string;
-  mint: (fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
-  setWhitelist: ({
-    whitelist
-  }: {
-    whitelist: string;
-  }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
-  updateStartTime: (fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
-  updatePerAddressLimit: ({
-    perAddressLimit
-  }: {
-    perAddressLimit: number;
-  }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
-  mintTo: ({
-    recipient
-  }: {
-    recipient: string;
-  }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
-  mintFor: ({
-    recipient,
-    tokenId
-  }: {
-    recipient: string;
-    tokenId: number;
-  }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
-  withdraw: (fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
+  mint: (
+    fee?: number | StdFee | "auto",
+    memo?: string,
+    funds?: Coin[]
+  ) => Promise<ExecuteResult>;
+  setWhitelist: (
+    {
+      whitelist,
+    }: {
+      whitelist: string;
+    },
+    fee?: number | StdFee | "auto",
+    memo?: string,
+    funds?: Coin[]
+  ) => Promise<ExecuteResult>;
+  updateStartTime: (
+    fee?: number | StdFee | "auto",
+    memo?: string,
+    funds?: Coin[]
+  ) => Promise<ExecuteResult>;
+  updatePerAddressLimit: (
+    {
+      perAddressLimit,
+    }: {
+      perAddressLimit: number;
+    },
+    fee?: number | StdFee | "auto",
+    memo?: string,
+    funds?: Coin[]
+  ) => Promise<ExecuteResult>;
+  mintTo: (
+    {
+      recipient,
+    }: {
+      recipient: string;
+    },
+    fee?: number | StdFee | "auto",
+    memo?: string,
+    funds?: Coin[]
+  ) => Promise<ExecuteResult>;
+  mintFor: (
+    {
+      recipient,
+      tokenId,
+    }: {
+      recipient: string;
+      tokenId: number;
+    },
+    fee?: number | StdFee | "auto",
+    memo?: string,
+    funds?: Coin[]
+  ) => Promise<ExecuteResult>;
+  withdraw: (
+    fee?: number | StdFee | "auto",
+    memo?: string,
+    funds?: Coin[]
+  ) => Promise<ExecuteResult>;
 }
 export class MinterClient extends MinterQueryClient implements MinterInterface {
   client: SigningCosmWasmClient;
   sender: string;
   contractAddress: string;
 
-  constructor(client: SigningCosmWasmClient, sender: string, contractAddress: string) {
+  constructor(
+    client: SigningCosmWasmClient,
+    sender: string,
+    contractAddress: string
+  ) {
     super(client, contractAddress);
     this.client = client;
     this.sender = sender;
@@ -113,66 +164,147 @@ export class MinterClient extends MinterQueryClient implements MinterInterface {
     this.withdraw = this.withdraw.bind(this);
   }
 
-  mint = async (fee: number | StdFee | "auto" = "auto", memo?: string, funds?: Coin[]): Promise<ExecuteResult> => {
-    return await this.client.execute(this.sender, this.contractAddress, {
-      mint: {}
-    }, fee, memo, funds);
+  mint = async (
+    fee: number | StdFee | "auto" = "auto",
+    memo?: string,
+    funds?: Coin[]
+  ): Promise<ExecuteResult> => {
+    return await this.client.execute(
+      this.sender,
+      this.contractAddress,
+      {
+        mint: {},
+      },
+      fee,
+      memo,
+      funds
+    );
   };
-  setWhitelist = async ({
-    whitelist
-  }: {
-    whitelist: string;
-  }, fee: number | StdFee | "auto" = "auto", memo?: string, funds?: Coin[]): Promise<ExecuteResult> => {
-    return await this.client.execute(this.sender, this.contractAddress, {
-      set_whitelist: {
-        whitelist
-      }
-    }, fee, memo, funds);
+  setWhitelist = async (
+    {
+      whitelist,
+    }: {
+      whitelist: string;
+    },
+    fee: number | StdFee | "auto" = "auto",
+    memo?: string,
+    funds?: Coin[]
+  ): Promise<ExecuteResult> => {
+    return await this.client.execute(
+      this.sender,
+      this.contractAddress,
+      {
+        set_whitelist: {
+          whitelist,
+        },
+      },
+      fee,
+      memo,
+      funds
+    );
   };
-  updateStartTime = async (fee: number | StdFee | "auto" = "auto", memo?: string, funds?: Coin[]): Promise<ExecuteResult> => {
-    return await this.client.execute(this.sender, this.contractAddress, {
-      update_start_time: {}
-    }, fee, memo, funds);
+  updateStartTime = async (
+    fee: number | StdFee | "auto" = "auto",
+    memo?: string,
+    funds?: Coin[]
+  ): Promise<ExecuteResult> => {
+    return await this.client.execute(
+      this.sender,
+      this.contractAddress,
+      {
+        update_start_time: {},
+      },
+      fee,
+      memo,
+      funds
+    );
   };
-  updatePerAddressLimit = async ({
-    perAddressLimit
-  }: {
-    perAddressLimit: number;
-  }, fee: number | StdFee | "auto" = "auto", memo?: string, funds?: Coin[]): Promise<ExecuteResult> => {
-    return await this.client.execute(this.sender, this.contractAddress, {
-      update_per_address_limit: {
-        per_address_limit: perAddressLimit
-      }
-    }, fee, memo, funds);
+  updatePerAddressLimit = async (
+    {
+      perAddressLimit,
+    }: {
+      perAddressLimit: number;
+    },
+    fee: number | StdFee | "auto" = "auto",
+    memo?: string,
+    funds?: Coin[]
+  ): Promise<ExecuteResult> => {
+    return await this.client.execute(
+      this.sender,
+      this.contractAddress,
+      {
+        update_per_address_limit: {
+          per_address_limit: perAddressLimit,
+        },
+      },
+      fee,
+      memo,
+      funds
+    );
   };
-  mintTo = async ({
-    recipient
-  }: {
-    recipient: string;
-  }, fee: number | StdFee | "auto" = "auto", memo?: string, funds?: Coin[]): Promise<ExecuteResult> => {
-    return await this.client.execute(this.sender, this.contractAddress, {
-      mint_to: {
-        recipient
-      }
-    }, fee, memo, funds);
+  mintTo = async (
+    {
+      recipient,
+    }: {
+      recipient: string;
+    },
+    fee: number | StdFee | "auto" = "auto",
+    memo?: string,
+    funds?: Coin[]
+  ): Promise<ExecuteResult> => {
+    return await this.client.execute(
+      this.sender,
+      this.contractAddress,
+      {
+        mint_to: {
+          recipient,
+        },
+      },
+      fee,
+      memo,
+      funds
+    );
   };
-  mintFor = async ({
-    recipient,
-    tokenId
-  }: {
-    recipient: string;
-    tokenId: number;
-  }, fee: number | StdFee | "auto" = "auto", memo?: string, funds?: Coin[]): Promise<ExecuteResult> => {
-    return await this.client.execute(this.sender, this.contractAddress, {
-      mint_for: {
-        recipient,
-        token_id: tokenId
-      }
-    }, fee, memo, funds);
+  mintFor = async (
+    {
+      recipient,
+      tokenId,
+    }: {
+      recipient: string;
+      tokenId: number;
+    },
+    fee: number | StdFee | "auto" = "auto",
+    memo?: string,
+    funds?: Coin[]
+  ): Promise<ExecuteResult> => {
+    return await this.client.execute(
+      this.sender,
+      this.contractAddress,
+      {
+        mint_for: {
+          recipient,
+          token_id: tokenId,
+        },
+      },
+      fee,
+      memo,
+      funds
+    );
   };
-  withdraw = async (fee: number | StdFee | "auto" = "auto", memo?: string, funds?: Coin[]): Promise<ExecuteResult> => {
-    return await this.client.execute(this.sender, this.contractAddress, {
-      withdraw: {}
-    }, fee, memo, funds);
+  withdraw = async (
+    fee: number | StdFee | "auto" = "auto",
+    memo?: string,
+    funds?: Coin[]
+  ): Promise<ExecuteResult> => {
+    return await this.client.execute(
+      this.sender,
+      this.contractAddress,
+      {
+        withdraw: {},
+      },
+      fee,
+      memo,
+      funds
+    );
   };
 }

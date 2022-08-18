@@ -2,7 +2,7 @@ import { DeploymentID } from "./deployment";
 import { GroupSpec } from "./groupspec";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 import { GroupID } from "./groupid";
-import { GeneratedType, Registry } from "@cosmjs/proto-signing";
+import { GeneratedType, Registry } from "@cosmjs-rn/proto-signing";
 import { MsgCreateDeployment, MsgDepositDeployment, MsgUpdateDeployment, MsgCloseDeployment } from "./deploymentmsg";
 import { MsgCloseGroup, MsgPauseGroup, MsgStartGroup } from "./groupmsg";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/akash.deployment.v1beta2.MsgCreateDeployment", MsgCreateDeployment], ["/akash.deployment.v1beta2.MsgDepositDeployment", MsgDepositDeployment], ["/akash.deployment.v1beta2.MsgUpdateDeployment", MsgUpdateDeployment], ["/akash.deployment.v1beta2.MsgCloseDeployment", MsgCloseDeployment], ["/akash.deployment.v1beta2.MsgCloseGroup", MsgCloseGroup], ["/akash.deployment.v1beta2.MsgPauseGroup", MsgPauseGroup], ["/akash.deployment.v1beta2.MsgStartGroup", MsgStartGroup]];
